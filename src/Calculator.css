@@ -1,0 +1,31 @@
+.calculator {
+  margin: 100px auto;
+  height: 345px;
+  width: 300px;
+}
+
+.calculator > .keyboard {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.operations {
+  width: 75px;
+}
+
+.numbers{
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 225px;
+} 
+
+.equal {
+  height: 75px;
+}

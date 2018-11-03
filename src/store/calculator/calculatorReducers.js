@@ -23,7 +23,13 @@ const reducer = handleActions({
     display: state.firstOperand,
     operator: action.payload.operator.name
   }),
-  EXECUTE_OPERATION: (state, action) => {}
+  SHOW_RESULT: (state, action) => ({
+    display: action.payload.result,
+    firstOperand: 0,
+    operator: '',
+    secondOperand: 0
+  }),
+
 }, initialState);
 
 export default reducer;

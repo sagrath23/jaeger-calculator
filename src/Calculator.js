@@ -51,7 +51,16 @@ class Calculator extends Component {
     }
   };
 
-  executeOperation = () => {};
+  executeOperation = () => {
+    const { executeOperation } = this.props;
+
+    this.setState({
+      operation: {
+      name: '',
+      symbol: '',
+      isSelected: false,
+    }}, () =>  { executeOperation() } );
+  };
 
   renderButtons = () => (
     <div className="keyboard">
@@ -87,7 +96,6 @@ Calculator.propTypes = {
   display: PropTypes.number.isRequired,
   updateFirstOperand: PropTypes.func.isRequired,
   updateSecondOperand: PropTypes.func.isRequired,
-  onReset: PropTypes.func.isRequired,
   executeOperation: PropTypes.func.isRequired
 };
 
